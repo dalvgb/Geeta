@@ -262,7 +262,7 @@ body.no-header-wrapper {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-height: 400px;
+  min-height: 600px;
 }
 .header {
   color: #fff;
@@ -2438,4 +2438,7 @@ header .container {
   .latest-work .item .figure-container a {
     min-height: 520px;
   }
+}
+.contact-us-background {
+  background-color: rgba(44, 56, 70, 0.8);
 }
