@@ -2442,3 +2442,8 @@ header .container {
 .contact-us-background {
   background-color: rgba(44, 56, 70, 0.8);
 }
+
+.container.text-center {
+    margin-top: 115px;
+}
+
