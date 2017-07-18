@@ -95,20 +95,33 @@
                         <div class="form-area">
                             <form role="form" id="contact-form">
                                 <br style="clear:both">
+
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile Number" required>
-                                </div>
-                                <div class="form-group">
-                                    <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
+                                    <input type="text" class="form-control" id="Name" name="Name" placeholder="Name" required>
                                 </div>
 
-                                <button type="button" id="submit" name="submit" class="btn-lg btn-success pull-right">Submit Form</button>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="Email" name="Email" placeholder="Email" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="Phone" name="Phone" placeholder="Phone Number" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <textarea class="form-control" type="textarea" id="Message" name="Message" placeholder="Message" maxlength="140" rows="7"></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="alert alert-success" role="alert">Success!</div>
+                                    <div class="alert alert-info" role="alert">Sending your request...</div>
+                                    <div class="alert alert-danger" role="alert">Failure!</div>
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="button" id="submit" name="submit" class="btn-lg btn-success pull-right">Submit Form</button>
+                                </div>
+
                             </form>
                         </div>
                     </div>
@@ -187,8 +200,8 @@
             </div><!--//container-->
         </div><!--//bottom-bar-->
     </footer><!--//footer-->
-    
-    <!-- Main Javascript -->          
+
+    <!-- Main Javascript -->
     <script type="text/javascript" src="assets/plugins/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
     <script type="text/javascript" src="assets/plugins/bootstrap-hover-dropdown.min.js"></script>		
@@ -205,7 +218,51 @@
     <!-- Form iOS fix -->
     <script type="text/javascript" src="assets/plugins/isMobile/isMobile.min.js"></script>
     <script type="text/javascript" src="assets/js/form-mobile-fix.js"></script>
-    
+
+    <script>
+
+        $(document).ready( function() {
+
+            DEBUG = {};
+
+            $(".alert").click( function(){
+                    $(".alert").slideUp();
+                });
+
+
+            $("#submit").click( function(e){
+
+                e.preventDefault();
+
+                $(".alert").slideUp();
+                $(".alert-info").slideDown().promise().done( function() {
+
+                    var endpoint = "https://script.google.com/macros/s/AKfycbywdIfR6G7LuanssEPOq-BiO3ELimMYhHPKLQbKVPtXG2G7m7E/exec";
+                    var form = $("#contact-form");
+
+                    console.log("Submitting form data...");
+                    console.log(form.serializeArray());
+
+                    var request = $.ajax({
+                        url: endpoint,
+                        type: "post",
+                        data: form.serializeArray()
+                    });
+
+                    request .success(function(){ $(".alert-success").show() })
+                            .fail(function(){ $(".alert-warning").show() })
+                            .then( function() { $(".alert-info").hide() })
+                            .done( function() {
+                                DEBUG.request = request;
+                                console.log(request.responseJSON);
+                            })
+
+                });
+            })
+        })
+
+    </script>
+
 </body>
 </html> 
 
