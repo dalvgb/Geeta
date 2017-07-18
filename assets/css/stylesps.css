@@ -2470,3 +2470,13 @@ header .container {
 .contact-us-promo {
   padding-bottom: 70px;
 }
+
+.alert {
+  display: none;
+  text-align: center;
+  /*position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 0;*/
+}
