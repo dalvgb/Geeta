@@ -206,6 +206,13 @@ select {
   -o-background-size: cover;
   background-size: cover;
 }
+.bg-slider-wrapper .flexslider .slide.slide-4 {
+  background: #65758e url('../images/background/hero4_web.jpg') no-repeat 50% top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 .bg-slider-wrapper .flexslider .flex-control-nav {
   z-index: 20;
   bottom: 45px;
