@@ -8,7 +8,7 @@ $(document).ready(function() {
         animation: "fade",
         directionNav: false, //remove the default direction-nav - https://github.com/woothemes/FlexSlider/wiki/FlexSlider-Properties
         controlNav: false, //remove the default control-nav
-        slideshowSpeed: 6000
+        slideshowSpeed: 3500
     });
     
     /* ======= Case Study Slideshow - Flexslider ======= */ 
