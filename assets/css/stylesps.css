@@ -52,6 +52,7 @@ a.btn:focus {
 a.btn-cta,
 .btn-cta {
   padding: 8px 30px;
+  margin-bottom: 60px;
 }
 a.btn-cta-primary,
 .btn-cta-primary {
