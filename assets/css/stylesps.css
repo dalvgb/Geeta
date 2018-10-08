@@ -19,7 +19,7 @@ p {
   line-height: 1.5;
 }
 a {
-  color: #5cbbdb;
+  color: #65bc0e;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
@@ -27,7 +27,7 @@ a {
 }
 a:hover {
   text-decoration: underline;
-  color: #47b3d7;
+  color: #65bc0e;
 }
 a:focus {
   text-decoration: none;
@@ -214,7 +214,7 @@ select {
   background-size: cover;
 }
 .bg-slider-wrapper .flexslider .slide.slide-5 {
-  background: #65758e url('../images/background/letsgo.jpg') no-repeat 50% top;
+  background: #65758e url('../images/background/blackbackground.jpg') no-repeat 50% top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -493,6 +493,10 @@ header .container {
   margin-bottom: 20px;
   font-size: 44px;
   color: #65BC0E;
+}
+.letsgo {
+  font-style: italic;
+  text-transform: lowercase;
 }
 .home-promo .title .bottom {
   font-family: 'Merriweather Sans', arial, sans-serif;
@@ -857,7 +861,7 @@ header .container {
   font-weight: 800;
 }
 .cta-section .contact-info a {
-  color: #86cde5;
+  color: #65bc0e;
 }
 .cta-section .contact-info a:hover {
   color: #65BC0E;
@@ -2210,7 +2214,7 @@ header .container {
     padding-bottom: 15px;
   }
   .home-promo {
-    padding-top: 160px;
+    padding-top: 190px;
   }
   .promo {
     padding-top: 100px;
