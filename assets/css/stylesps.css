@@ -499,10 +499,13 @@ header .container {
   font-style: italic;
   text-transform: lowercase;
 }
+.home-promo .title .bottom  {
+  text-transform: none;
+}
 .home-promo .title .bottom {
   font-family: 'Merriweather Sans', arial, sans-serif;
   font-style: italic;
-  text-transform: lowercase;
+  /* text-transform: lowercase; */
   font-weight: 500;
 }
 .home-promo .btn {
@@ -833,7 +836,7 @@ header .container {
   background-size: cover;
   min-height: 420px;
   color: #fff;
-  padding-top: 80px;
+  padding-top: 175px;
 }
 .cta-section .title {
   font-size: 36px;
